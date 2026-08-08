@@ -70,7 +70,7 @@ Master Writing Skill 会完整读取一本书或一篇连贯的长文，逐章�
 |---|---|
 | 前情是什么 | 这段文字出现前发生了什么 |
 | 用词和标点 | 哪几个字、哪处停顿在起作用 |
-| 怎么搭起来的 | 主要意思放在哪里，几句话怎样接起来 |
+| 前后怎么接起来的 | 一句话里的前后部分怎样安排，几句话之间怎样衔接 |
 | 放在这儿干什么 | 它负责开头、推进、转折、举证还是收尾 |
 | 可以学到哪一招 | 用一个动作给写法命名 |
 | 我该怎么用 | 下一篇稿子里可以直接尝试的动作 |
@@ -84,7 +84,7 @@ Master Writing Skill 会完整读取一本书或一篇连贯的长文，逐章�
 |---|---|
 | 前情是什么 | 采访刚开始，读者还不了解周师傅 |
 | 用词和标点 | “半扇门”和“三只表”都能看见；“先”把回答往后压了一步 |
-| 怎么搭起来的 | 第一句给环境，第二句给动作，原因暂时留着 |
+| 前后怎么接起来的 | 第一句给环境，第二句给动作，原因暂时留着 |
 | 放在这儿干什么 | 让人物带着一个具体动作出场，同时留下疑问 |
 | 可以学到哪一招 | 先让人物做事，再解释他是什么样的人 |
 | 我该怎么用 | 删掉人物介绍，改写成他进入采访现场后的第一个动作 |
@@ -110,31 +110,24 @@ Master Writing Skill 会完整读取一本书或一篇连贯的长文，逐章�
 
 这个仓库遵循 [Agent Skills 开放格式](https://agentskills.io/specification)：根目录包含 `SKILL.md`，细节放在 `references/`，画板参考放在 `assets/`。请安装整个文件夹，保留原有目录结构。
 
+### 通用安装（推荐）
+
+先把 Skill 克隆到通用的用户级目录。Codex、Kimi Code CLI 以及支持 `~/.agents/skills/` 的 Agent 可以直接读取这一份：
+
+```bash
+mkdir -p ~/.agents/skills
+git clone https://github.com/yutongcai0628/master-writing-skill.git ~/.agents/skills/master-writing-skill
+```
+
+[Codex 官方文档](https://developers.openai.com/codex/skills)和 [Kimi Code 官方文档](https://www.kimi.com/code/docs/kimi-code-cli/customization/skills.html)都列出了这个通用目录。其他 Agent 如果也扫描 `~/.agents/skills/`，无需再克隆一次。
+
 ### Claude Code
 
-[Claude Code 官方文档](https://code.claude.com/docs/en/skills)支持用户级 Skills 目录：
+[Claude Code 官方文档](https://code.claude.com/docs/en/skills)目前使用 `~/.claude/skills/`。为了继续共用上面克隆的同一份仓库，可以创建软链接：
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/yutongcai0628/master-writing-skill.git ~/.claude/skills/master-writing-skill
-```
-
-### Codex
-
-[Codex 官方文档](https://developers.openai.com/codex/skills)支持以 `SKILL.md` 为入口的 Skills：
-
-```bash
-mkdir -p ~/.codex/skills
-git clone https://github.com/yutongcai0628/master-writing-skill.git ~/.codex/skills/master-writing-skill
-```
-
-### Kimi Code CLI
-
-[Kimi Code 官方文档](https://www.kimi.com/code/docs/kimi-code-cli/customization/skills.html)支持 `~/.kimi-code/skills/` 和通用的 `~/.agents/skills/`：
-
-```bash
-mkdir -p ~/.kimi-code/skills
-git clone https://github.com/yutongcai0628/master-writing-skill.git ~/.kimi-code/skills/master-writing-skill
+ln -s ~/.agents/skills/master-writing-skill ~/.claude/skills/master-writing-skill
 ```
 
 ### WorkBuddy
