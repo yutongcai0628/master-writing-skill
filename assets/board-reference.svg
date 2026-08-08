@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+  <!-- 主画板参考实现 · 见 references/whiteboard-spec.md
+       画布 16:9 · 导出务必保持比例 -->
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFCF8"/>
+      <stop offset="1" stop-color="#FBF8FC"/>
+    </linearGradient>
+    <marker id="ar-pink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#E9A9C0"/>
+    </marker>
+    <marker id="ar-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9B7FC7"/>
+    </marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#E0B44A"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+
+  <!-- ── 标题 ── -->
+  <text x="90" y="92" font-size="34" font-weight="700" fill="#3D2E47">一段文字如何提炼出写作方法</text>
+  <text x="90" y="124" font-size="17" fill="#6B5A78">把一段原文拆开，看作者到底做了什么</text>
+  <line x1="90" y1="152" x2="1510" y2="152" stroke="#E4DCEA" stroke-width="1"/>
+
+  <!-- ── 栏目标签 ── -->
+  <text x="90"   y="252" font-size="12" font-weight="600" letter-spacing="1.7" fill="#8C3A5C">原文</text>
+  <text x="595"  y="252" font-size="12" font-weight="600" letter-spacing="1.7" fill="#4A3566">四层：从一个词看到整篇</text>
+  <text x="1100" y="252" font-size="12" font-weight="600" letter-spacing="1.7" fill="#7A5410">方法</text>
+
+  <!-- ── 连线（画在节点下层）── -->
+  <!-- 入口 → 汇流脊 -->
+  <path d="M490 510 H542" fill="none" stroke="#E9A9C0" stroke-width="2.5"/>
+  <path d="M542 339 V681" fill="none" stroke="#E9A9C0" stroke-width="2.5"/>
+  <path d="M542 339 H586" fill="none" stroke="#E9A9C0" stroke-width="2"  marker-end="url(#ar-pink)"/>
+  <path d="M542 453 H586" fill="none" stroke="#E9A9C0" stroke-width="2"  marker-end="url(#ar-pink)"/>
+  <path d="M542 567 H586" fill="none" stroke="#E9A9C0" stroke-width="2"  marker-end="url(#ar-pink)"/>
+  <path d="M542 681 H586" fill="none" stroke="#E9A9C0" stroke-width="2"  marker-end="url(#ar-pink)"/>
+  <!-- 四层 → 汇流脊 → 要义 -->
+  <path d="M995 339 H1048" fill="none" stroke="#9B7FC7" stroke-width="2"/>
+  <path d="M995 453 H1048" fill="none" stroke="#9B7FC7" stroke-width="2"/>
+  <path d="M995 567 H1048" fill="none" stroke="#9B7FC7" stroke-width="2"/>
+  <path d="M995 681 H1048" fill="none" stroke="#9B7FC7" stroke-width="2"/>
+  <path d="M1048 339 V681" fill="none" stroke="#9B7FC7" stroke-width="2.5"/>
+  <path d="M1048 415 H1091" fill="none" stroke="#9B7FC7" stroke-width="2.5" marker-end="url(#ar-violet)"/>
+  <!-- 要义 → 迁移 -->
+  <path d="M1300 473 V505" fill="none" stroke="#E0B44A" stroke-width="2.5" marker-end="url(#ar-amber)"/>
+
+  <!-- ── 入口：金句卡 ── -->
+  <rect x="90" y="405" width="400" height="210" rx="20" fill="#FCE7EF" stroke="#E9A9C0" stroke-width="2"/>
+  <text x="122" y="470" font-size="22" font-weight="700" fill="#8C3A5C">一段原文</text>
+  <text x="122" y="502" font-size="15" fill="#6B5A78">一句、几句、一整段都行，摘到招数完整为止</text>
+  <line x1="122" y1="528" x2="458" y2="528" stroke="#E9A9C0" stroke-width="1" opacity="0.55"/>
+  <text x="122" y="558" font-size="15" fill="#6B5A78">哪一章 · 谁说的 · 前面发生了什么</text>
+
+  <!-- ── 四层观察 ── -->
+  <g>
+    <rect x="595" y="293" width="400" height="92" rx="16" fill="#F3EDFB" stroke="#9B7FC7" stroke-width="1.5"/>
+    <circle cx="634" cy="339" r="17" fill="#9B7FC7"/>
+    <text x="634" y="344" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">01</text>
+    <text x="668" y="333" font-size="20" font-weight="700" fill="#4A3566">用了什么词</text>
+    <text x="668" y="359" font-size="14" fill="#6B5A78">动词、修饰、标点、停顿</text>
+  </g>
+  <g>
+    <rect x="595" y="407" width="400" height="92" rx="16" fill="#E7DCF7" stroke="#9B7FC7" stroke-width="1.5"/>
+    <circle cx="634" cy="453" r="17" fill="#9B7FC7"/>
+    <text x="634" y="458" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">02</text>
+    <text x="668" y="447" font-size="20" font-weight="700" fill="#4A3566">句子怎么搭的</text>
+    <text x="668" y="473" font-size="14" fill="#6B5A78">主干在哪、什么先说什么后说</text>
+  </g>
+  <g>
+    <rect x="595" y="521" width="400" height="92" rx="16" fill="#DACAF2" stroke="#9B7FC7" stroke-width="1.5"/>
+    <circle cx="634" cy="567" r="17" fill="#9B7FC7"/>
+    <text x="634" y="572" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">03</text>
+    <text x="668" y="561" font-size="20" font-weight="700" fill="#4A3566">这段干什么</text>
+    <text x="668" y="587" font-size="14" fill="#6B5A78">开头、推进、转折、收尾</text>
+  </g>
+  <g>
+    <rect x="595" y="635" width="400" height="92" rx="16" fill="#CBB6EC" stroke="#9B7FC7" stroke-width="1.5"/>
+    <circle cx="634" cy="681" r="17" fill="#9B7FC7"/>
+    <text x="634" y="686" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">04</text>
+    <text x="668" y="675" font-size="20" font-weight="700" fill="#4A3566">跟前后什么关系</text>
+    <text x="668" y="701" font-size="14" fill="#6B5A78">谁先说谁后说、前面埋的后面怎么收</text>
+  </g>
+
+  <!-- ── 出口：要义 + 迁移 ── -->
+  <rect x="1100" y="357" width="400" height="116" rx="16" fill="#FDF0CC" stroke="#E0B44A" stroke-width="1.5"/>
+  <text x="1132" y="404" font-size="22" font-weight="700" fill="#7A5410">学到一招</text>
+  <text x="1132" y="434" font-size="14" fill="#6B5A78">从这几个具体选择里，总结出一个能重复用的做法</text>
+
+  <rect x="1100" y="513" width="400" height="150" rx="16" fill="#FDF0CC" stroke="#E0B44A" stroke-width="2"/>
+  <text x="1132" y="562" font-size="22" font-weight="700" fill="#7A5410">怎么用｜人物专访</text>
+  <text x="1132" y="594" font-size="14" fill="#6B5A78">角度 · 场景 · 多方说法 · 判断留余地</text>
+  <text x="1132" y="620" font-size="14" fill="#6B5A78">下一篇稿子里具体要做的动作</text>
+
+  <!-- ── 图例：颜色承载信息 ── -->
+  <g transform="translate(595, 782)">
+    <rect x="0"  y="0" width="26" height="10" rx="3" fill="#F3EDFB" stroke="#9B7FC7" stroke-width="1"/>
+    <rect x="30" y="0" width="26" height="10" rx="3" fill="#E7DCF7" stroke="#9B7FC7" stroke-width="1"/>
+    <rect x="60" y="0" width="26" height="10" rx="3" fill="#DACAF2" stroke="#9B7FC7" stroke-width="1"/>
+    <rect x="90" y="0" width="26" height="10" rx="3" fill="#CBB6EC" stroke="#9B7FC7" stroke-width="1"/>
+    <text x="128" y="9" font-size="13" fill="#6B5A78">紫色越深，看的范围越大：词 → 句 → 段 → 篇</text>
+  </g>
+  <text x="90" y="791" font-size="13" fill="#6B5A78">先看清作者怎么写的，</text>
+  <text x="90" y="813" font-size="13" fill="#6B5A78">再把这招带进自己的稿子</text>
+</svg>

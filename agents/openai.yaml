@@ -1,0 +1,4 @@
+interface:
+  display_name: "大师写作课 · Master Writing Skill"
+  short_description: "逐章拆一本书，细读原文，生成可以直接照着练的写作方法手册"
+  default_prompt: "使用 $master-writing-skill 拆解我提供的一本书：先询问我的写作水平和目标，再完整扫描章节、制作原文卡片，并输出带画板的飞书文档或 Markdown 写作手册。"
