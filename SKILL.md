@@ -1,13 +1,13 @@
 ---
 name: master-writing-skill
-description: Turn one book or coherent long-form text into a goal-oriented close-reading handbook led by 金句拆解. Use when the user wants to study how concrete sentences and short paragraphs create viewpoint, character, scene, structure, rhythm, or judgment for 人物专访、杂志特稿、时尚评论、文化评论、小红书观点文、公众号深度文、叙事散文或短篇小说, with optional Feishu Docs and Feishu Whiteboard output. Require one source and one writing goal per run.
+description: Turn one book or coherent long-form text into a goal-oriented close-reading handbook led by 金句拆解, then optionally turn 3–6 user-selected writing methods into a portable personal writing coach Agent Skill. Use when the user wants to study how concrete sentences and short paragraphs create viewpoint, character, scene, structure, rhythm, or judgment for 人物专访、杂志特稿、时尚评论、文化评论、小红书观点文、公众号深度文、叙事散文或短篇小说, with optional Feishu Docs and Feishu Whiteboard output. Require one source and one writing goal per run.
 ---
 
 # Master Writing Skill
 
 用户给一本书，你把它变成一份能照着练的写作手册。
 
-分两步：**先拆整本书，再拆具体的句子。**
+分两步：**先拆整本书，再拆具体的句子。** 文档交付后，用户还可以选择 3–6 个方法，保存成个人写作训练 Skill。
 
 ---
 
@@ -169,8 +169,19 @@ description: Turn one book or coherent long-form text into a goal-oriented close
 3. 第二步 · 拆句子（分组，每组高亮框 + 画板 + 卡片表格）
 4. 怎么用到你自己的稿子上（表格）
 5. 练一下（一份素材包 + 一道题 + 自查清单），细节看 [`references/course-completion.md`](references/course-completion.md)
+6. 保存成个人写作训练 Skill（一个短入口，邀请用户选择方法）
 
 排版细节看 [`references/feishu-course-template.md`](references/feishu-course-template.md)。用户交作业后怎么批改看 [`references/scoring-rubric.md`](references/scoring-rubric.md)。
+
+---
+
+## 可选 · 保存成个人写作训练 Skill
+
+先交付完整文档，再给出 4–6 个值得长期练的方法，请用户亲自选择 3–6 个。用户确认以后，按 [`references/personal-coach-skill.md`](references/personal-coach-skill.md) 生成一个独立、可移动的 Agent Skill 文件夹。
+
+这个子 Skill 保存写作动作、适用场景、失效条件和卡片依据，提供学习、陪写、批改三种模式。默认让用户先选择方法、先写一版；用户明确要求示范时，再代写一小段。
+
+没有得到用户确认时，只保留文档末尾的邀请入口。不要自动生成子 Skill，也不要替用户决定要带走哪些方法。
 
 ---
 
@@ -181,6 +192,8 @@ description: Turn one book or coherent long-form text into a goal-oriented close
 - 分清哪句是作者写的、哪句是别人的原话
 - 每个结论都要能指回具体的卡
 - 同一件事只在一个地方讲，别重复
+- 个人写作训练 Skill 只能使用用户确认的方法，每个方法都要指回具体卡片
+- 避免承诺复刻作者风格；一次写作集中练 1–2 个方法
 - **禁用先否定一种说法、再转向另一结论的对比句式**，包括顺序颠倒的变体。改写成直接的肯定句，交付前扫描标题、正文、表格、画板和练习
 - 一本书一次，一个写作目标一次。换书或换目标就重新跑
 
@@ -189,4 +202,5 @@ description: Turn one book or coherent long-form text into a goal-oriented close
 - 书读不了 → 说清是格式问题还是内容问题，请用户换个文件
 - 飞书连不上 → 存成本地 Markdown，告诉用户存哪了、为什么没成
 - 语料不够撑不起某一栏 → 明说哪一栏是空的，别编
+- 用户还没选方法 → 给出候选清单，等用户确认后再生成个人写作训练 Skill
 - 画板参考实现在 [`assets/board-reference.svg`](assets/board-reference.svg)，改版前先打开看
