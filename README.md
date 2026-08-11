@@ -276,6 +276,19 @@ master-writing-skill/
 - 个人写作训练 Skill 需要用户先选择方法，避免自动生成一套与用户目标无关的写作规则
 
 
+## 关于作者
+我是yutong，中央美术学院艺术管理系研究生，ex-Dewu-Alibaba-Kering Integrated Marekting
+
+现AI Startup Branding & Growth Leader
+
+欢迎关注我👇
+
+小红书：https://www.xiaohongshu.com/user/profile/5a818ee911be106f9a18c511
+
+X：https://x.com/yutongCAI0628
+
+
+
 ## License
 
 [MIT](LICENSE)
