@@ -1,4 +1,4 @@
-# 大师写作课 · Master Writing Skill
+# 一本书的写作课 · Master Writing Skill
 
 **上传一本书，选择一个写作目标，把全书拆解成一份可以反复查阅的写作手册。向用户交付一篇飞书文档。**
 
