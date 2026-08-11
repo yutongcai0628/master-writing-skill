@@ -1,4 +1,4 @@
 interface:
   display_name: "大师写作课 · Master Writing Skill"
-  short_description: "逐章细读一本书，生成写作手册和可选的个人训练 Skill"
-  default_prompt: "使用 $master-writing-skill 拆解我提供的一本书，按我的目标生成细读手册，并在我选择方法后制作个人写作训练 Skill。"
+  short_description: "细读一本书或长文，生成写作手册和可本地安装的个人训练 Skill"
+  default_prompt: "使用 $master-writing-skill 拆解我提供的一本书或长文，按我的目标生成细读手册；我选择方法后，制作个人写作训练 Skill，并询问是否本地安装。"
